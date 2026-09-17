@@ -15,3 +15,5 @@ Program6.py - Made September 16, worked with Gwen to create a program that rotat
 Program7.py - Made September 16, worked with Gwen to create a program that measures varying voltage paired with a moisture detector
 
 Data.py - Made September 16, used to store data from Program7.py
+
+Summary Data - Added September 17, includes excel spreadsheet of data from experiments on the 16th
