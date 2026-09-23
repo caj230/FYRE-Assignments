@@ -1,0 +1,52 @@
+
+
+import machine
+import time
+
+# Arduino Nano ESP32 ADC Mapping (A0 = GPIO 1, A1 = GPIO 2)
+PIN_LIGHT = 1
+PIN_MOISTURE = 2
+
+# Configure ADC channels
+adc_light = machine.ADC(machine.Pin(PIN_LIGHT))
+adc_moisture = machine.ADC(machine.Pin(PIN_MOISTURE))
+
+# Set attenuation for 0V - 3.3V full input range
+adc_light.atten(machine.ADC.ATTN_11DB)
+adc_moisture.atten(machine.ADC.ATTN_11DB)
+
+def read_adc(adc):
+    """Returns raw 12-bit ADC value (0-4095) and calculated voltage (0-3.3V)."""
+    raw = adc.read_u16()
+    voltage = (raw / 65535.0) * 3.3
+    return raw, voltage
+
+def run_diagnostics():
+    print("=" * 60)
+    print("    Arduino Nano ESP32 - Dual Sensor Diagnostic Loop")
+    print("=" * 60)
+    print("Instructions:")
+    print("  1. Cover light sensor -> raw/voltage reading should drop.")
+    print("  2. Shine light -> raw/voltage reading should rise.")
+    print("  3. Place moisture sensor in water -> value should change significantly.")
+    print("  4. Leave open to air -> value should reflect dry state.")
+    print("-" * 60)
+
+    count = 0
+    while True:
+        count += 1
+        l_raw, l_volt = read_adc(adc_light)
+        m_raw, m_volt = read_adc(adc_moisture)
+
+        # Flag potential connection issues (0 = short to GND, 4095 = pulled to VCC)
+        l_status = "RAIL (Check Wire)" if l_raw in (0, 4095) else "OK"
+        m_status = "RAIL (Check Wire)" if m_raw in (0, 4095) else "OK"
+
+        print(f"[{count:04d}] LIGHT    -> Raw: {l_raw:4d} | Voltage: {l_volt:.2f}V | Status: {l_status}")
+        print(f"[{count:04d}] MOISTURE -> Raw: {m_raw:4d} | Voltage: {m_volt:.2f}V | Status: {m_status}")
+        print("-" * 60)
+       
+        time.sleep(1)
+
+if __name__ == "__main__":
+    run_diagnostics()
