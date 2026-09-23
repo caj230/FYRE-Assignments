@@ -1,4 +1,8 @@
-
+#Team Member Names: Carter, Gwen
+#Purpose of Code: tests to ensure that sensors in circuit are working properly
+#Date Code was started: September 23, 2026
+#Date of last update: September 23, 2026
+#Explanation of AI use: Used to help develop code
 
 import machine
 import time
