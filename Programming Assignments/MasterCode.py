@@ -1,6 +1,8 @@
-# Team Member Names: Carter, Gwen
-# Purpose: Master control program for Light, Vapor, LEDs, Servo, and Button
-# Board: Arduino Nano ESP32 (MicroPython)
+#Group Names: Carter, Gwen
+#Purpose of Code: master control program for Light, Vapor, LEDs, Servo, and Button
+#Date Started: September 28, 2026
+#Last Update: September 28, 2026
+#Explanation of AI use: prompted to help create code 
 
 import machine
 import time
