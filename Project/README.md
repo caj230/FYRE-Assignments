@@ -1,4 +1,4 @@
-#Project
+# Project
 
 SensorDiagnostic.py - Made September 23, worked with Gwen to create program that tests to ensure sensors are working in circuit
 
