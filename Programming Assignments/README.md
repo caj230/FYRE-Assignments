@@ -1,4 +1,4 @@
-# Programming Assigments
+# Programming Assignments
 
 Program1.py - Made September 9, prints "Hello World"
 
