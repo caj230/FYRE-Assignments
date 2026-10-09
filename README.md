@@ -1,2 +1,3 @@
 # FYRE-Assignments
-Repo for my assignments from the "Sensing the World" module of ENGR095 at Lehigh University in Fall 2026
+Includes 3 folders detailing my production during "Sensing the World" module of ENGR095 at Lehigh University in Fall 2026:
+
