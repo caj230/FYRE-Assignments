@@ -3,18 +3,22 @@ Includes 3 folders detailing my production during "Sensing the World" module of 
 
 Programming Assignments - 
 
+Link: https://github.com/caj230/FYRE-Assignments/tree/main/Programming%20Assignments
+
 Project - 
 
+Link: https://github.com/caj230/FYRE-Assignments/tree/main/Project
+
 Reflections -
+
+Link: https://github.com/caj230/FYRE-Assignments/tree/main/Reflections
 
 Below is an image of our finished final project:
 
 
 
 
-[View Source Code](src)
-[View Documentation](FYRE Assignments/Project)
 
 
-https://github.com/caj230/FYRE-Assignments/tree/main/Programming%20Assignments
+
 
